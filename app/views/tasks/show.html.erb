@@ -1,0 +1,6 @@
+<h1><%= @task.title %></h1>
+ <p><%= @task.details %></p>
+<%= link_to "Retour à la liste", tasks_path %>
+<%= link_to "Modifier", edit_task_path(@task) %>
+<%= link_to "Supprimer", task_path(@task),
+      data: { turbo_method: :delete, turbo_confirm: "Es-tu sûr de vouloir supprimer cette tâche ?" } %>
